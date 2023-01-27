@@ -1,0 +1,19 @@
+.mat-drawer {
+  width: 260px;
+  position: absolute;
+  height: 100%;
+}
+.mat-drawer-container {
+  height:100%;  
+  width: 100%;
+  
+}
+
+.mat-drawer {
+  background:rgb(42, 128, 226);
+  -webkit-text-fill-color:  white;
+  border-color: transparent;
+  color: white;
+  
+}
+

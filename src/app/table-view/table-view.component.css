@@ -1,0 +1,48 @@
+@import "../home/home.component.css";
+
+body { background-color: antiquewhite;
+    text-align:center;
+    background: rgb(238,238,238); 
+    background: -moz-linear-gradient(top,  rgba(238,238,238,1) 0%, rgba(89,89,89,1) 100%); 
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(238,238,238,1)), color-stop(100%,rgba(89,89,89,1))); 
+    background: -webkit-linear-gradient(top,  rgba(238,238,238,1) 0%,rgba(89,89,89,1) 100%);
+    background: -o-linear-gradient(top,  rgba(238,238,238,1) 0%,rgba(89,89,89,1) 100%);
+    background: -ms-linear-gradient(top,  rgba(238,238,238,1) 0%,rgba(89,89,89,1) 100%); 
+    background: linear-gradient(to bottom,  rgba(238,238,238,1) 0%,rgba(89,89,89,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#595959',GradientType=0 );
+    position: fixed;
+  
+    margin-top: -90px;
+    margin-left: -17px;
+}
+img{
+    margin-left: 1200px;
+    margin-top: -68px;
+    margin-bottom: 100px;
+    position: relative;
+    overflow-y:hidden;
+}
+div{
+    background-color: aqua;
+}
+input{
+    font-size: 30px;
+    margin-left: 102px;
+}
+button{
+    font-size: 30px;
+    margin-left: -361px;
+}
+button:hover{
+    background-image: url(https://okcredit-blog-images-prod.storage.googleapis.com/2021/02/E1--1-.jpg);
+    
+}
+
+
+#inputGroupFile:hover{
+    background-color: rgb(139, 79, 79);
+}
+img:hover{
+    background-image: url(https://mediasamosa.com/wp-content/uploads/2019/11/lemma.jpg);
+
+}

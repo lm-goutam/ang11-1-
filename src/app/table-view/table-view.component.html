@@ -1,0 +1,61 @@
+<link rel="stylesheet" href="table-view.component.css">
+<div class="container-fluid page">
+    <div class="d-flex page__box p-3 mt-2">Table View</div>
+    <div>
+      <div class="page__content-data position-relative text-center">
+        
+
+     
+        <body>
+          <a class="row mb-2 mt-5" class="col-sm-6 offset-3" class="row" class="col-md-6"
+                            class="input-group"
+                                class="custom-file">
+                                <img src="https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_256,w_256,f_auto,q_auto:eco,dpr_1/cbbb7b5b9a6f91baf5bb" alt="">
+                                    <input type="file" name="file" class="custom-file-input" id="inputGroupFile" required (change)="handleImport($event)"
+                                        accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel">
+                              
+                        <br>
+                        <br>
+                        <br>
+                        <a class="col-md-6">
+                            <button (click)="handleExport()" class="btn btn-primary float-right">
+                                Export <i class="fa fa-download"></i>
+                            </button>
+                            <br>
+                            <br>
+            <a class="row" class="col-sm-6 offset-3">
+                    <table class="table" mat-table class="mat-elevation-z8 demo-table">
+                      
+                            <tr>
+                                <th scope="col"></th>
+                                <th scope="col"></th>
+                                <th scope="col"></th>
+                                <th scope="col"></th>
+                                <th scope="col"></th>
+                            </tr>
+                      
+                            <ng-container *ngIf="movies.length; else elseBlock">
+                                <tr *ngFor="let Id of movies; paginate:{itemPerPage:4,currentPage:th} let i = index" >
+                                    <th scope="row">{{ i + 1 }}</th>
+                                    <td>{{ Id.Name }}</td>
+                                    <td>{{ Id.Address }}</td>
+                                    <td>{{ Id.Salary }}</td>
+                                    <td><span class="badge bg-warning text-dark">{{ Id.UserName }}</span></td>
+                                
+                            </ng-container>
+                            <ng-template #elseBlock>
+                      
+                            </ng-template>
+                          </table>
+                          <pagination-controls (pageChange)=" $event" class="float-right"></pagination-controls>
+                          </a>
+                          </a>
+                          </a>
+                          <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                          </body>
+            
+
+
+      </div>
+    </div>
+  </div>

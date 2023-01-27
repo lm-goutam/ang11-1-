@@ -1,0 +1,99 @@
+<!--<link rel="stylesheet" href="dashboard.component.css">
+<div class="container-fluid page">
+    <div class="d-flex page__box p-3 mt-2">Dashboard</div>
+    <div class="page__content shadow p-3 position-relative">
+      <div class="page__content-data position-absolute text-center">
+        Dashboard Content Goes Here
+      </div>
+    </div>
+</div>
+<div class="form-group">
+  <label for=" organization ">Organization</label>
+  <select id ="organization" name="organization" ngModel class ="from-control">
+    <option value="1">Lemma</option>
+    <option value="2">Lemma1</option>
+    <option value="3">Lemma12</option>
+    <option value="4">Lemma123</option>
+    <option value="5">Lemma1234</option>
+
+  </select>
+</div>-->
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+<div class="container">
+  <div class="row">
+      <div class="form-bg">
+            <div class="panel panel-primary">
+              <div class="panel-body">
+
+                          
+                <div class="form-group">
+                  <label for="branch">Organization</label>
+                  <select id="branch" name="branch" class="form-control" ngModel>
+                    <option *ngFor="let branch of Org" [value]="branch.id">
+                      {{branch.name}}
+                    </option>
+                  </select>
+                </div>
+<br/>
+                <div class="form-group">
+                  <label for="branch">CMS Name</label>
+                  <select id="branch" name="branch" class="form-control" ngModel>
+                    <option *ngFor="let branch of Cms" [value]="branch.id">
+                      {{branch.name}}
+                    </option>
+                  </select>
+                </div>
+<br/>
+
+                <div class="form-group">
+                  <label for="branch">Status</label>
+                  <select id="branch" name="branch" class="form-control" ngModel>
+                    <option *ngFor="let branch of Stat" [value]="branch.id">
+                      {{branch.name}}
+                    </option>
+                  </select>
+                </div>
+
+<br/>
+                <div class="form-group">
+                  <label for="aurl">Applications</label>
+                  
+                </div>  
+
+
+<br/>
+                <div class="form-group">
+                  <label for="aurl">Application URL</label>
+                  <input id="aurl" type="text" class="form-control"
+                        name="aurl" ngModel>
+                </div>  
+
+<br/>
+                <div class="form-group">
+                  <label for="comm">Comments</label>
+                  <input id="comm" type="text" class="form-control"
+                        name="comm" ngModel>
+                </div>    
+
+                
+
+              </div>
+              <br/>
+              <br/>
+              <br/>
+              <div class="panel-footer">
+                <button class="btn btn-primary" type="submit">Submit</button>
+              </div>
+              
+            </div>
+            
+      </div>
+  </div>
+</div>
