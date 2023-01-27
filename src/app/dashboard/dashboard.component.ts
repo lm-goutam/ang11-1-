@@ -33,4 +33,32 @@ export class DashboardComponent implements OnInit {
     { id: 3, name: 'Inprogress' },
     { id: 4, name: 'Blocked' }
   ];
+  list=[
+    {
+      id:1, name:'Html5-SDK',
+     
+    },
+    {
+      id:2, name:'Windows App',
+     
+    },
+    {
+      id:3, name:'Android App',
+     
+    },
+    {
+      id:4, name:'Windows SDK',
+    },
+    {
+      id:5, name:'Andriod SDK',
+    },
+    {
+      id:6, name:'MaC App',
+    },
+
+   
+  ]
+  itemSelected(e:any){
+    console.log(e);
+  }
 }

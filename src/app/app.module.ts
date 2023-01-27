@@ -16,6 +16,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatListModule } from '@angular/material/list';
 import { TableViewComponent } from './table-view/table-view.component';
 import { HttpClientModule } from '@angular/common/http';
+import { NgSelectModule } from '@ng-select/ng-select';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,6 +31,7 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     BrowserAnimationsModule,
     // * MATERIAL IMPORTS
+    NgSelectModule,
     MatSidenavModule,
     MatToolbarModule,
     MatMenuModule,
