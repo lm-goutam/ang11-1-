@@ -36,7 +36,7 @@
                 <div class="form-group">
                   <label for="branch">Organization</label>
                   <select id="branch" name="branch" class="form-control" ngModel>
-                    <option *ngFor="let branch of Org" [value]="branch.id">
+                    <option *ngFor="let branch of orglist" [value]="branch.name">
                       {{branch.name}}
                     </option>
                   </select>
@@ -45,7 +45,7 @@
                 <div class="form-group">
                   <label for="branch">CMS Name</label>
                   <select id="branch" name="branch" class="form-control" ngModel>
-                    <option *ngFor="let branch of Cms" [value]="branch.id">
+                    <option *ngFor="let branch of Cms" [value]="branch.name">
                       {{branch.name}}
                     </option>
                   </select>
@@ -55,7 +55,7 @@
                 <div class="form-group">
                   <label for="branch">Status</label>
                   <select id="branch" name="branch" class="form-control" ngModel>
-                    <option *ngFor="let branch of Stat" [value]="branch.id">
+                    <option *ngFor="let branch of Stat" [value]="branch.name">
                       {{branch.name}}
                     </option>
                   </select>
@@ -67,7 +67,7 @@
                   
                 </div>  
                 <div class=" col-md-3 " style="height:20%;font-size: 15px; width:100%">
-                  <ng-select [items]="list" bindLabel="name" bindValue="id" [multiple]="true" (change)="itemSelected($event)">
+                  <ng-select [items]="App" bindLabel="name" bindValue="id" [multiple]="true" (change)="itemSelected($event)">
                   </ng-select>
                  </div>
 
@@ -93,6 +93,10 @@
               <br/>
               <div class="panel-footer">
                 <button class="btn btn-primary" type="submit">Submit</button>
+             
+              <br><br>
+              <br>
+                
               </div>
               
             </div>

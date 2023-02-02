@@ -1,0 +1,6 @@
+[
+    { "id": 1, "name": "Done" },
+    { "id": 2, "name": "Pending" },
+    { "id": 3, "name": "Inprogress" },
+    { "id": 4, "name": "Blocked" }
+  ]

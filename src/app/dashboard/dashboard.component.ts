@@ -1,5 +1,38 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import orgData from './mydata.json';
+import cmsData from './cmsdata.json';
+import staData from './ststusdata.json';
+import appData from './appdata.json';
+import intgsData from './intgStat.json'
 
+declare module "*.json"{
+
+}
+interface Org{
+  id:number;
+  name:string;
+}
+interface cms1{
+  id:number;
+  name:string;
+}
+interface stat1{
+  id:number;
+  name:string;
+}
+interface app1{
+  id:number;
+  name:string;
+}
+interface intgs1{
+  org_name:string;
+  cms_name:string;
+  stat_name:string;
+  /*app_name:string;
+  app_url:string;
+  comm:string;*/
+}
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -7,13 +40,40 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private httpClient:HttpClient
+  ) { }
 
   ngOnInit(): void {
   }
  
+  orglist: Org[]= orgData;
+  Cms: cms1[]= cmsData;
+  Stat: stat1[]= staData;
+  App: app1[]= appData;
+  Intgs: intgs1[]=intgsData;
 
-  Org: any[] = [
+
+ /* selectedOrg: string='';
+  selectChangeHandlerOrg (event: any){
+    this.selectedOrg =event.target.value;
+  }
+  selectedCms: string ='';
+  selectChangeHandlerCms (event: any){
+    this.selectedCms =event.target.value;
+  }
+  selectedSta: string= '';
+  selectChangeHandlerSta (event: any){
+    this.selectedSta =event.target.value;
+  }
+  addPost(){
+    this.Intgs.push({
+      org_name:this.selectedOrg,
+      cms_name:this.selectedCms,
+      stat_name:this.selectedSta
+  })
+}*/
+  /*Org: any[] = [
     { id: 1, name: 'Lemma' },
     { id: 2, name: 'Wipro' },
     { id: 3, name: 'Tcs' },
@@ -57,7 +117,7 @@ export class DashboardComponent implements OnInit {
     },
 
    
-  ]
+  ]*/
   itemSelected(e:any){
     console.log(e);
   }
